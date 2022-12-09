@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin management </title>
+</head>
+
+<body>
+
+    <h3>LOgin here </h3>
+    <br><br><br>
+    <h5>enter id </h5>
+    <input type="text" id="id">
+    <br>
+    <h5>Enter admin password</h5>
+    <input type="text" id="pass">
+    <br><button onclick="checklogin()">Login</button>
+
+</body>
+
+</html>
+
+<script>
+
+    let checklogin = () => {
+
+        console.log("main is main ")
+        let admin = 0;
+        admin = localStorage.getItem("admin")
+        if (admin == null) {
+            let arr = [12345, "mainismain"]
+            localStorage.setItem("admin", JSON.stringify(arr))
+        }
+
+        else {
+
+            let id = document.getElementById("id").value;
+            let password = document.getElementById("pass").value;
+             admin = JSON.parse(admin)
+            if (admin[0] == id) {
+                if (admin[1] == password) {
+                    alert("success")
+                    window.location = 'adminpannel.html'
+                }
+                else {
+                    alert("wrong password")
+                }
+            }
+            else {
+                alert("wrond id ")
+            }
+        }
+    }
+
+</script>

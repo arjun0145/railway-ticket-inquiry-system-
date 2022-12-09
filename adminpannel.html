@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin pannel</title>
+</head>
+
+<body>
+
+    <h1>Welcome to Admin Pannel </h1>
+    <br><br>
+
+    <h2>Here you go to add Train details</h2>
+    <br><br>
+
+
+    <h5>Enter train no </h5>
+    <br>
+    <input type="text" id="trainNo">
+    <br>
+
+    <h5>Enter train name </h5>
+    <br>
+    <input type="text" id="trainName">
+    <br>
+
+    <h5>Enter traing starting station  </h5>
+    <br>
+    <input type="text" id="starting">
+    <br>
+
+    <h5>Enter tain going to  </h5>
+    <br>
+    <input type="text" id="end">
+    <br>
+    <br><br>
+
+    <button onclick="savedetails()"> Save Details</button>
+    
+
+    
+
+</body>
+
+<script>
+    let savedetails = ()=>{
+        let trainNo = document.getElementById("trainNO").value ; 
+        let trainName = document.getElementById("trainName").value ; 
+        let trainStart= document.getElementById("starting").value; 
+        let trainEnd = document.getElementById("end").value ; 
+
+        let maindata = localStorage.getItem("details")
+
+        if (maindata == null)
+        {
+            
+        }
+
+
+    }
+
+</script>
+
+</html>
